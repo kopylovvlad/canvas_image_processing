@@ -1,7 +1,7 @@
 {
   "name": "canvas_image_processing",
   "description": "Resize and crop image by canvas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/kopylovvlad/canvas_image_processing.git"
