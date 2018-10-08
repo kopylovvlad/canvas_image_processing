@@ -1,0 +1,50 @@
+{
+  "name": "canvas_image_processing",
+  "description": "Resize and crop image by canvas",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kopylovvlad/canvas_image_processing.git"
+  },
+  "homepage": "https://github.com/kopylovvlad/canvas_image_processing",
+  "scripts": {
+    "test": "babel-tape-runner \"tests/*.js\" | faucet"
+  },
+  "keywords": [
+    "image",
+    "canvas",
+    "crop",
+    "resize"
+  ],
+  "author": {
+    "name": "Vladislav Kopylov",
+    "email": "kopylov.vlad@gmail.com"
+  },
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-tape-runner": "^3.0.0",
+    "faucet": "^0.0.1",
+    "tape": "~2.13.4"
+  },
+  "testling": {
+    "files": "test.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/17..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}
