@@ -1,7 +1,7 @@
 {
   "name": "canvas_image_processing",
-  "description": "Resize and crop image by canvas",
-  "version": "0.0.2",
+  "description": "Resize and crop image by canvas in browser",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/kopylovvlad/canvas_image_processing.git"
@@ -31,10 +31,11 @@
     "brfs": "^2.0.1",
     "browserify": "^16.2.3",
     "faucet": "^0.0.1",
-    "tape": "~2.13.4"
+    "tape": "~2.13.4",
+    "testling": "^1.7.1"
   },
   "testling": {
-    "files": "test.js",
+    "files": "tests/test.js",
     "browsers": [
       "ie/8..latest",
       "firefox/17..latest",

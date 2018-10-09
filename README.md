@@ -94,6 +94,12 @@ With [yarn](https://yarnpkg.com/en/) do
 $ yarn add canvas_image_processing
 ```
 
+## Run test
+
+```bash
+yarn test
+```
+
 ## License
 
 (MPL-2.0)
