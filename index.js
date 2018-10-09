@@ -1,21 +1,10 @@
 const main = {
   /**
-   * conver base64-image string to Image (HTMLImageElement instance)
-   * @param  {string} base64
-   * @returns {Image}
-   */
-  image64ToImage(base64) {
-    const image = new Image();
-    image.src = base64;
-    return image;
-  },
-
-  /**
    * conver base64-image string to Image (HTMLImageElement instance) asynchronously
    * @param  {string} base64
    * @returns {Promise}
    */
-  image64ToImageAsync(base64) {
+  image64ToImage(base64) {
     return new Promise((resolve, reject) => {
       const image = new Image();
       image.src = base64;
@@ -31,15 +20,16 @@ const main = {
   /**
    * conver base64-image string to canvas
    * @param  {string} base64
-   * @returns {Canvas}
+   * @returns {Promise}
    */
-  image64ToCanvas(base64) {
-    return this.imageToCanvas(this.image64ToImage(base64));
+  async image64ToCanvas(base64) {
+    const img = await this.image64ToImage(base64);
+    return this.imageToCanvas(img);
   },
 
   /**
    * conver image string to canvas
-   * @param  {string} base64
+   * @param  {Image} image
    * @returns {Canvas}
    */
   imageToCanvas(image) {
@@ -56,10 +46,11 @@ const main = {
    * @param  {string} base64
    * @param  {integer} newWidth
    * @param  {integer} newHeight
-   * @returns {string} base64-image
+   * @returns {Promise} with base64-image
    */
-  resizeImage64(base64, newWidth, newHeight) {
-    return this.resizeImage(this.image64ToImage(base64), newWidth, newHeight);
+  async resizeImage64(base64, newWidth, newHeight) {
+    const img = await this.image64ToImage(base64);
+    return this.resizeImage(img, newWidth, newHeight);
   },
 
   /**
@@ -86,16 +77,11 @@ const main = {
    * @param  {integer} y
    * @param  {integer} newWidth
    * @param  {integer} newHeight
-   * @returns {string} base64-image string
+   * @returns {Promise} with base64-image string
    */
-  cropImage64(base64, x, y, newWidth, newHeight) {
-    return this.cropImage(
-      this.image64ToImage(base64),
-      x,
-      y,
-      newWidth,
-      newHeight,
-    );
+  async cropImage64(base64, x, y, newWidth, newHeight) {
+    const img = await this.image64ToImage(base64);
+    return this.cropImage(img, x, y, newWidth, newHeight);
   },
 
   /**

@@ -8,7 +8,7 @@
   },
   "homepage": "https://github.com/kopylovvlad/canvas_image_processing",
   "scripts": {
-    "test": "babel-tape-runner \"tests/*.js\" | faucet"
+    "test": "browserify -t brfs tests/test.js > tests/bundle.js && open tests/index.html"
   },
   "keywords": [
     "image",
@@ -28,6 +28,8 @@
   "dependencies": {},
   "devDependencies": {
     "babel-tape-runner": "^3.0.0",
+    "brfs": "^2.0.1",
+    "browserify": "^16.2.3",
     "faucet": "^0.0.1",
     "tape": "~2.13.4"
   },
