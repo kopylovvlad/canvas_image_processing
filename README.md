@@ -37,15 +37,15 @@ function action(event) {
 ```js
 /* converting */
 
-// conver base64-image string to Image (HTMLImageElement instance) asynchronously
+// convert base64-image string to Image (HTMLImageElement instance) asynchronously
 // returns promise with HTMLImageElement
 CIP.image64ToImage(base64Image);
 
-// conver base64-image string to canvas
+// convert base64-image string to canvas
 // returns promise with HTMLCanvasElement
 CIP.image64ToCanvas(base64Image);
 
-// conver image string to canvas
+// convert image string to canvas
 // returns HTMLCanvasElement element
 CIP.imageToCanvas(image);
 
@@ -88,7 +88,7 @@ With [npm](https://npmjs.org) do
 $ npm install canvas_image_processing
 ```
 
-With [yarn](https://yarnpkg.com/en/) do
+With [yarn](https://yarnpkg.com) do
 
 ```bash
 $ yarn add canvas_image_processing
