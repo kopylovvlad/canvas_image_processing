@@ -1,4 +1,6 @@
-# canvas image processing
+# Canvas image processing
+
+[![version](https://img.shields.io/npm/v/canvas_image_processing.svg)](https://www.npmjs.com/package/canvas_image_processing)
 
 Canvas Image Processing (cip) is easy image processing by canvas.
 It works in browser.
@@ -16,14 +18,14 @@ function action(event) {
   if (event.target.files[0]) {
     const file = event.target.files[0];
     const reader = new FileReader();
-    reader.onload = function(e) {
+    reader.onload = function (e) {
       let base64_image = e.target.result;
 
-      CIP.cropImage64(base64_image, 0, 0, 200, 200).then(cropped_image => {
+      CIP.cropImage64(base64_image, 0, 0, 200, 200).then((cropped_image) => {
         console.log('cropped base64 image: ', cropped_image);
       });
 
-      CIP.resizeImage64(base64_image, 600, 600).then(cropped_image => {
+      CIP.resizeImage64(base64_image, 600, 600).then((cropped_image) => {
         console.log('resized base64 image: ', cropped_image);
       });
     };
